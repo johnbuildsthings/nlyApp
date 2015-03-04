@@ -9,10 +9,12 @@
 
 
 <body>
-<div class="banner">
+<div class="container">
+<div class="banner insetShadow">
 <img src='/static/pics/banner.png' />
 <div id='welcome'> Welcome to the NLY </div>
 </div>
+
 
 <div class='nav'>
 {% for item in pages %}
@@ -23,11 +25,19 @@
 </div>
 
 
-<div class='info'> info bar</div>
+<div id="info" class="shadow">
+            <a class="twitter-timeline" href="https://twitter.com/thenly" data-widget-id="573207282143514624">Tweets by @thenly</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>       
+</div>
 
-<div class='content'>
+
+<div class="content shadow">
 {% block mainContent %}
 {% endblock %}
 </div>
+</div><!--end container-->
+<script src="/static/js/main.js"></script>
 </body>
 </html>

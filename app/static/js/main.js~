@@ -1,0 +1,12 @@
+/*javascript*/
+
+var main = function(){
+
+
+var height=document.getElementById('info').offsetHeight;
+var timeline = document.getElementsByClassName('twitter-timeline');
+window.alert("hello");
+
+}
+
+$(document).ready(main)

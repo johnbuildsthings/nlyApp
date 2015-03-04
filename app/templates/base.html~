@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head>
+{% block head %}
+<title>{% block title %}{% endblock %}</title>
+{% endblock %}
+<link href="/static/mainTmpCss.css" type="text/css" rel="stylesheet"  />
+</head>
+
+
+<body>
+<div class="banner"><img src='/static/pics/banner.png' height="100%" width="auto" float='left'/>
+<div id='welcome'> Welcome to the NLY </div>
+</div>
+
+<div class='nav'>
+{% for item in pages %}
+<div class='navTab' style="width:{{100/(pages|length)}}%;">
+<button type='button' onclick="location.href='/{{item}}'">{{item}}</button>
+</div>
+{% endfor %}
+</div>
+
+
+<div class='info'> info bar</div>
+
+<div class='content'>
+{% block mainContent %}
+{% endblock %}
+</div>
+</body>
+</html>

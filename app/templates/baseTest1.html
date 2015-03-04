@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+
+
+{% block title %}NLY{% endblock %}
+{% block head %}
+{{super () }}
+<link href="/static/mainTmpCss.css" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block body %}
+<div class="banner">banner goes here</div>
+
+{% block navbar %}
+<div class='nav'>
+{% for item in pages %}
+<div class='navTab'>
+<button type='button'><link href="{{ url_for('intern', name=item) }}" /></button>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+
+<div class='info'> info bar</div>
+
+<div class='content'>
+{% block mainContent %}
+{% endblock %}
+</div>
+
+{% endblock %}
